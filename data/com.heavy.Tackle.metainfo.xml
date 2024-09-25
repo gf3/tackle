@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>com.heavy.Tackle</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>0BSD</project_license>
+  <name>Tackle</name>
+  <summary>Freshline toolbox</summary>
+  <url type="homepage">https://github.com/gf3/tackle</url>
+  <url type="bugtracker">https://github.com/gf3/tackle/issues</url>
+  <url type="vcs-browser">https://github.com/gf3/tackle</url>
+  <developer id="heavy.com">
+    <name>Gianni Chiappetta</name>
+  </developer>
+</component>

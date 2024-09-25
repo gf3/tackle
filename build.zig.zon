@@ -1,0 +1,55 @@
+.{
+    // This is the default name used by packages depending on this one. For
+    // example, when a user runs `zig fetch --save <url>`, this field is used
+    // as the key in the `dependencies` table. Although the user can choose a
+    // different name, most users will stick with this provided value.
+    //
+    // It is redundant to include "zig" in this name because it is already
+    // within the Zig package namespace.
+    .name = "tackle",
+
+    // This is a [Semantic Version](https://semver.org/).
+    // In a future version of Zig it will be used for package deduplication.
+    .version = "0.0.0",
+
+    // This field is optional.
+    // This is currently advisory only; Zig does not yet do anything
+    // with this value.
+    //.minimum_zig_version = "0.11.0",
+
+    // This field is optional.
+    // Each dependency must either provide a `url` and `hash`, or a `path`.
+    // `zig build --fetch` can be used to fetch all dependencies of a package, recursively.
+    // Once all dependencies are fetched, `zig build` no longer requires
+    // internet connectivity.
+    .dependencies = .{
+        .xml = .{
+            .url = "git+https://github.com/ianprime0509/zig-xml?ref=main#ee8e09bccf73fa2b494e7e4a706a5ca5523f8eac",
+            .hash = "1220a895bbaf36f886864af03b799ce4bcc02592a0d40953b569983bfe5a98b2a65b",
+        },
+        .libintl = .{
+            .url = "git+https://github.com/ianprime0509/zig-libintl?ref=main#0c436aa63c31bb8ad5d7d59800638f784e1e04a5",
+            .hash = "1220e1f1576da3188a8749940f836cfb4f858ee3455660b05c67984ddc29cf63956e",
+        },
+        .gobject = .{
+            .url = "https://github.com/ianprime0509/zig-gobject/releases/download/v0.2.1/bindings-gnome46.tar.zst",
+            .hash = "12203bb2843d2b9db725edaaa9868a817e60dd71fba53f1e7b04b49d2d5bae90c057",
+        },
+    },
+
+    // Specifies the set of files and directories that are included in this package.
+    // Only files and directories listed here are included in the `hash` that
+    // is computed for this package. Only files listed here will remain on disk
+    // when using the zig package manager. As a rule of thumb, one should list
+    // files required for compilation plus any license(s).
+    // Paths are relative to the build root. Use the empty string (`""`) to refer to
+    // the build root itself.
+    // A directory listed here means that all files within, recursively, are included.
+    .paths = .{
+        "build.zig.zon",
+        "build.zig",
+        "data",
+        "po",
+        "src",
+    },
+}

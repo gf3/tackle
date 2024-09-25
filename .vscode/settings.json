@@ -1,0 +1,6 @@
+{
+    "zig.buildOnSave": true,
+    "zig.path": "/usr/bin/zig",
+    "zig.zls.path": "/usr/local/bin/zls",
+    "zig.zls.enableBuildOnSave": true
+}

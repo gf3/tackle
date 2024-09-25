@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gresources>
+    <gresource prefix="/com/heavy/Tackle/">
+        <file preprocess="xml-stripblanks" alias="metainfo.xml">../com.heavy.Tackle.metainfo.xml</file>
+        <file preprocess="xml-stripblanks">ui/window.ui</file>
+    </gresource>
+</gresources>
